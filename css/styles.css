@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+
+body {
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f3f5f8;
+}
+.container nav {
+  display: flex;
+  margin-top: 10px;
+  width: 100%;
+  justify-content: space-around;
+  height: 80px;
+  z-index: 11;
+}
+.container nav .logo {
+  display: flex;
+  font-size: 32px;
+  font-weight: 800;
+  color: #3d535f;
+  letter-spacing: 3px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.container nav .navItems {
+  display: flex;
+  margin-top: 10px;
+}
+.container nav .navItems li {
+  list-style: none;
+  margin: 0 15px;
+}
+.container nav .navItems li a {
+  font-size: 25px;
+  color: #3d535f;
+  letter-spacing: 3px;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+.container nav .navItems li:hover a,
+.container nav .links:hover a {
+  color: #7f00ff;
+}
+.container nav .links a {
+  font-size: 30px;
+  color: #3d535f;
+  margin: 25px 10px;
+}
+.container nav .links a i {
+  margin-top: 10px;
+}
+.container .wrapper {
+  width: 100%;
+  height: 100%;
+  padding: 0 10%;
+  overflow: hidden;
+}
+.container .wrapper .cols {
+  width: 50%;
+}
+.container .wrapper .topline {
+  display: block;
+  position: relative;
+  font-size: 35px;
+  letter-spacing: 5px;
+  color: #3d535f;
+}
+.container .wrapper .topline::after {
+  position: absolute;
+  content: "";
+  height: 4px;
+  width: 45px;
+  bottom: 10px;
+  background-color: #7f00ff;
+}
+.container .wrapper h1 {
+  display: block;
+  font-size: 5em;
+  font-weight: 900;
+  color: #3d535f;
+}
+.container .wrapper .multiText {
+  color: #7f00ff;
+}
+.container .wrapper p {
+  display: block;
+  width: 90%;
+  font-size: 1em;
+  color: #3d535f;
+  margin-top: 20px;
+}
+.container .wrapper .btns {
+  width: 100%;
+  position: relative;
+}
+.container .wrapper .btns button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 25px;
+  font-weight: 400;
+  color: #FFF;
+  background-color: #3d535f;
+  padding: 8px 14px;
+  margin: 15px 5px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  box-shadow: 0 15px 10px rgba(0, 0, 0, 0.4);
+}
+.container .wrapper .btns button:hover {
+  background-color: #7f00ff;
+}
+
+/*# sourceMappingURL=styles.css.map */
