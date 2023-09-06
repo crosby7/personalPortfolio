@@ -1,0 +1,138 @@
+nav {
+    width: 100%;
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-around;
+    height: 80px;
+    z-index: 11;
+
+    .logo {
+        display: flex;
+        font-size: 32px;
+        font-weight: 800;
+        color: $site-grey;
+        letter-spacing: 3px;
+        cursor: pointer;
+        text-transform: uppercase;
+    }
+
+    .navItems {
+        display: flex;
+        margin-top: 10px;
+
+        li {
+            list-style: none;
+            margin: 0 15px;
+
+            a {
+                font-size: 25px;
+                font-weight: 400;
+                color: $site-grey;
+                letter-spacing: 3px;
+                text-decoration: none;
+                text-transform: capitalize;
+            }
+        }
+    }
+
+    .mobileNav {
+        display: none;
+        margin-top: 1px;
+
+        li {
+            display: none;
+            //list-style: none;
+            margin: 0 15px;
+
+            a {
+                font-size: 25px;
+                font-weight: 400;
+                color: $site-grey;
+                letter-spacing: 3px;
+                text-decoration: none;
+                text-transform: capitalize;
+            }
+        }
+    }
+
+    .navItems li:hover a,
+    .links:hover a,
+    .mobileNav li:hover a{
+        color: $site-purple;
+    }
+
+    .links {
+        a {
+            font-size: 30px;
+            color: $site-grey;
+            margin: 25px 10px;
+
+            i {
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+.openHamburger {
+    li {
+        display: block;
+        position: relative;
+        width: 100px;
+        height: 50px;
+        background-color: $site-grey;
+        border: 1px solid $site-purple;
+        color: $site-white;
+    }
+}
+
+@media (max-width: 1020px) {
+    nav {
+        .logo {
+            font-size: 26px;
+        }
+
+        .navItems {
+            li {
+                a {
+                    font-size: 18px;
+                }
+            }
+        }
+
+        .links {
+            a {
+                i {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 680px) {
+    nav {
+        .logo {
+            font-size: 20px;
+            letter-spacing: 1px;
+        }
+
+        .navItems {
+            display: none;
+        }
+
+        .mobileNav {
+            display: block;
+            margin-top: 5px;
+
+            .fa-bars {
+                font-size: 20px;
+                color: $site-grey;
+            }
+        }
+
+        .mobileNav:hover i {
+            color: $site-purple;
+        }
+    }
+}

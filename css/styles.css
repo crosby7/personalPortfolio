@@ -5,24 +5,23 @@
   font-family: "poppins", sans-serif;
 }
 
+html {
+  background-color: #f3f5f8;
+}
+
 body {
   overflow: hidden;
 }
 
-.container {
+nav {
   width: 100%;
-  min-height: 100vh;
-  background-color: #f3f5f8;
-}
-.container nav {
   display: flex;
   margin-top: 10px;
-  width: 100%;
   justify-content: space-around;
   height: 80px;
   z-index: 11;
 }
-.container nav .logo {
+nav .logo {
   display: flex;
   font-size: 32px;
   font-weight: 800;
@@ -31,41 +30,107 @@ body {
   cursor: pointer;
   text-transform: uppercase;
 }
-.container nav .navItems {
+nav .navItems {
   display: flex;
   margin-top: 10px;
 }
-.container nav .navItems li {
+nav .navItems li {
   list-style: none;
   margin: 0 15px;
 }
-.container nav .navItems li a {
+nav .navItems li a {
   font-size: 25px;
+  font-weight: 400;
   color: #3d535f;
   letter-spacing: 3px;
   text-decoration: none;
   text-transform: capitalize;
 }
-.container nav .navItems li:hover a,
-.container nav .links:hover a {
+nav .mobileNav {
+  display: none;
+  margin-top: 1px;
+}
+nav .mobileNav li {
+  display: none;
+  margin: 0 15px;
+}
+nav .mobileNav li a {
+  font-size: 25px;
+  font-weight: 400;
+  color: #3d535f;
+  letter-spacing: 3px;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+nav .navItems li:hover a,
+nav .links:hover a,
+nav .mobileNav li:hover a {
   color: #7f00ff;
 }
-.container nav .links a {
+nav .links a {
   font-size: 30px;
   color: #3d535f;
   margin: 25px 10px;
 }
-.container nav .links a i {
+nav .links a i {
   margin-top: 10px;
+}
+
+.openHamburger li {
+  display: block;
+  position: relative;
+  width: 100px;
+  height: 50px;
+  background-color: #3d535f;
+  border: 1px solid #7f00ff;
+  color: #f3f5f8;
+}
+
+@media (max-width: 1020px) {
+  nav .logo {
+    font-size: 26px;
+  }
+  nav .navItems li a {
+    font-size: 18px;
+  }
+  nav .links a i {
+    font-size: 20px;
+  }
+}
+@media (max-width: 680px) {
+  nav .logo {
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+  nav .navItems {
+    display: none;
+  }
+  nav .mobileNav {
+    display: block;
+    margin-top: 5px;
+  }
+  nav .mobileNav .fa-bars {
+    font-size: 20px;
+    color: #3d535f;
+  }
+  nav .mobileNav:hover i {
+    color: #7f00ff;
+  }
+}
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f3f5f8;
 }
 .container .wrapper {
   width: 100%;
   height: 100%;
   padding: 0 10%;
   overflow: hidden;
+  margin-top: 20px;
 }
 .container .wrapper .cols {
-  width: 50%;
+  width: 70%;
 }
 .container .wrapper .topline {
   display: block;
@@ -84,7 +149,7 @@ body {
 }
 .container .wrapper h1 {
   display: block;
-  font-size: 5em;
+  font-size: 6em;
   font-weight: 900;
   color: #3d535f;
 }
@@ -118,6 +183,22 @@ body {
 }
 .container .wrapper .btns button:hover {
   background-color: #7f00ff;
+}
+
+@media (max-width: 1020px) {
+  .container .wrapper h1 {
+    font-size: 4em;
+  }
+  .container .wrapper .topline {
+    font-size: 28px;
+  }
+  .container .wrapper p {
+    font-size: 0.85em;
+    width: 100%;
+  }
+  .container .wrapper .btns button {
+    font-size: 16px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

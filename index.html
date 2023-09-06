@@ -9,42 +9,32 @@
     <title>Cameron Crosby</title>
 </head>
 <body>
-    <div class="container">
-        <nav>
-            <div class="logo">
-                Cameron Crosby
-            </div>
-            <ul class="navItems">
-                <li><a href="#">home</a></li>
-                <li><a href="#">about</a></li>
-                <li><a href="#">projects</a></li>
-            </ul>
-            <div class="links">
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-            </div>
-        </nav>
-        <div class="wrapper">
-            <div class="cols cols0">
-                <span class="topline">Hello</span>
-                <h1>I'm <span class="multiText"></span></h1>
-                <p>I'm a full stack web developer from Indianapolis. Well-versed in HTML, CSS, Javascript, and SASS, with some knowledge of JQuery, Node, and C#.</p>
-                <div class="btns">
-                    <button>Download Resume</button>
-                    <button>Contact Me</button>
-                </div>
-            </div>
+    <nav>
+        <div class="logo">
+            Cameron Crosby
         </div>
+        <ul class="navItems">
+            <li><a href="#home">home</a></li>
+            <li><a href="#about">about</a></li>
+            <li><a href="#projects">projects</a></li>
+        </ul>
+        <ul class="mobileNav" id="hamburgerMenu">
+            <i class="fa-solid fa-bars"></i>
+            <li><a href="#home">home</a></li>
+            <li><a href="#about">about</a></li>
+            <li><a href="#projects">projects</a></li>
+        </ul>
+        <div class="links">
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </nav>
+
+    <div class="container" id="container">
     </div>
 
+    <script src="lib/jquery-3.6.4.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script>
-        var typingEffect = new Typed(".multiText", {
-            strings : ["a coder", "a developer", "Cameron Crosby"],
-            loop : true,
-            typeSpeed : 100,
-            backSpeed : 80,
-            backDelay : 2000
-        })
-    </script>
+    <script type="module" src="services/services.js"></script>
+    <script type="module" src="app/app.js"></script>
 </body>
 </html>

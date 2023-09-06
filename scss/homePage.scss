@@ -3,68 +3,15 @@
     min-height: 100vh;
     background-color: $site-white;
 
-    nav {
-        display: flex;
-        margin-top: 10px;
-        width: 100%;
-        justify-content: space-around;
-        height: 80px;
-        z-index: 11;
-    
-        .logo {
-            display: flex;
-            font-size: 32px;
-            font-weight: 800;
-            color: $site-grey;
-            letter-spacing: 3px;
-            cursor: pointer;
-            text-transform: uppercase;
-        }
-    
-        .navItems {
-            display: flex;
-            margin-top: 10px;
-    
-            li {
-                list-style: none;
-                margin: 0 15px;
-    
-                a {
-                    font-size: 25px;
-                    color: $site-grey;
-                    letter-spacing: 3px;
-                    text-decoration: none;
-                    text-transform: capitalize;
-                }
-            }
-        }
-    
-        .navItems li:hover a,
-        .links:hover a {
-            color: $site-purple;
-        }
-    
-        .links {
-            a {
-                font-size: 30px;
-                color: $site-grey;
-                margin: 25px 10px;
-
-                i {
-                    margin-top: 10px;
-                }
-            }
-        }
-    }    
-
     .wrapper {
         width: 100%;
         height: 100%;
         padding: 0 10%;
         overflow: hidden;
+        margin-top: 20px;
     
         .cols {
-            width: 50%;
+            width: 70%;
         }
         
         .topline {
@@ -86,7 +33,7 @@
         
         h1 {
             display: block;
-            font-size: 5em;
+            font-size: 6em;
             font-weight: 900;
             color: $site-grey;
         }
@@ -129,3 +76,34 @@
         }
     }
 }
+
+
+
+@media (max-width: 1020px) {
+    .container {
+
+        .wrapper {
+            
+            h1 {
+                font-size: 4em;
+            }
+
+            .topline {
+                font-size: 28px;
+            }
+
+            p {
+                font-size: 0.85em;
+                width: 100%;
+            }
+
+            .btns {
+                button {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+
