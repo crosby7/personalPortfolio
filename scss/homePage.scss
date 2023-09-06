@@ -28,7 +28,7 @@
             height: 4px;
             width: 45px;
             bottom: 10px;
-            background-color: $site-purple;
+            background-color: $site-green;
         }
         
         h1 {
@@ -39,14 +39,14 @@
         }
         
         .multiText {
-            color: $site-purple;
+            color: $site-green;
             //text-transform: capitalize;
         }
         
         p {
             display: block;
             width: 90%;
-            font-size: 1em;
+            font-size: 1.5em;
             color: $site-grey;
             margin-top: 20px;
         }
@@ -68,10 +68,15 @@
                 letter-spacing: 2px;
                 text-transform: capitalize;
                 box-shadow: 0 15px 10px rgba(0, 0, 0, 0.4);
+
+                a {
+                    text-decoration: none;
+                    color: #FFF;
+                }
             }
 
             button:hover {
-                background-color: $site-purple;
+                background-color: $site-green;
             }
         }
     }
@@ -93,14 +98,33 @@
             }
 
             p {
-                font-size: 0.85em;
+                font-size: 24px;
                 width: 100%;
             }
 
             .btns {
                 button {
-                    font-size: 16px;
+                    font-size: 20px;
                 }
+            }
+        }
+    }
+}
+
+@media (max-width: 680px) {
+    .container {
+        .wrapper {
+            .topline {
+                font-size: 30px;
+            }
+            h1 {
+                font-size: 40px;
+                height: 120px;
+            }
+
+            p {
+                font-size: 20px;
+                margin-bottom: 20px;
             }
         }
     }

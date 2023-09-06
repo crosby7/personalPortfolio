@@ -1,0 +1,46 @@
+.aboutPage {
+    width: 90%;
+    margin: 40px auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .myImage {
+        width: 600px;
+        height: 400px;
+        border: 2px solid $site-green;
+    }
+
+    .aboutText {
+        width: 40%;
+        font-size: 20px;
+        color: $site-grey;
+    }
+}
+
+@media (max-width: 1020px) {
+    .aboutPage {
+        .myImage {
+            width: 400px;
+            height: 300px;
+        }
+
+        .aboutText {
+            font-size: 16px;
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    .aboutPage {
+        flex-direction: column;
+
+        .myImage {
+            margin-bottom: 20px;
+        }
+
+        .aboutText {
+            width: 80%;
+        }
+    }
+}

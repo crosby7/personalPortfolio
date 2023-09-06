@@ -23,6 +23,7 @@ export function loadPage() {
 
     if (pageToLoad == "home")
     {
+        setTimeout(initializeTyped, 500);
         initializeTyped();
     }
 }

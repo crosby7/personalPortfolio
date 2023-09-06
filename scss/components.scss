@@ -26,7 +26,7 @@ nav {
 
             a {
                 font-size: 25px;
-                font-weight: 400;
+                font-weight: 500;
                 color: $site-grey;
                 letter-spacing: 3px;
                 text-decoration: none;
@@ -58,33 +58,12 @@ nav {
     .navItems li:hover a,
     .links:hover a,
     .mobileNav li:hover a{
-        color: $site-purple;
+        color: $site-green;
     }
 
-    .links {
-        a {
-            font-size: 30px;
-            color: $site-grey;
-            margin: 25px 10px;
-
-            i {
-                margin-top: 10px;
-            }
-        }
-    }
 }
 
-.openHamburger {
-    li {
-        display: block;
-        position: relative;
-        width: 100px;
-        height: 50px;
-        background-color: $site-grey;
-        border: 1px solid $site-purple;
-        color: $site-white;
-    }
-}
+
 
 @media (max-width: 1020px) {
     nav {
@@ -100,25 +79,22 @@ nav {
             }
         }
 
-        .links {
-            a {
-                i {
-                    font-size: 20px;
-                }
-            }
-        }
     }
 }
 
 @media (max-width: 680px) {
     nav {
         .logo {
-            font-size: 20px;
+            font-size: 24px;
             letter-spacing: 1px;
         }
 
         .navItems {
             display: none;
+            
+            li {
+                display: none;
+            }
         }
 
         .mobileNav {
@@ -126,13 +102,41 @@ nav {
             margin-top: 5px;
 
             .fa-bars {
-                font-size: 20px;
+                font-size: 24px;
                 color: $site-grey;
             }
         }
 
+        .openHamburger {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 300px;
+
+            .fa-bars {
+                width: 75%;
+                text-align: right;
+            }
+            li {
+                display: flex;
+                position: relative;
+                width: 100px;
+                height: 50px;
+                background-color: $site-grey;
+                border: 1px solid $site-green;
+                justify-content: center;
+                align-items: center;
+
+                a {
+                    color: $site-white;
+                    font-size: 18px;
+                    letter-spacing: 1.5px;
+                }
+            }
+        }
+
         .mobileNav:hover i {
-            color: $site-purple;
+            color: $site-green;
         }
     }
 }
