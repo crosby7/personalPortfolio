@@ -1,80 +1,117 @@
 .projectsPage {
-    width: 90%;
-    min-height: 1vh;
+  width: 90%;
+  min-height: 1vh;
+  margin: 40px auto;
+
+  .project {
+    width: 100%;
+    height: 400px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin: 40px auto;
 
     .quickLook {
-        img {
-            width: 500px;
-            height: auto;
-            border: 2px solid $site-green;
-            border-radius: 20px;
-        }
+      img {
+        width: 500px;
+        height: auto;
+        border: 2px solid $site-green;
+        border-radius: 20px;
+      }
     }
 
     .textAndLink {
-        width: 40%;
-        h2 {
-            font-size: 36px;
-            margin-bottom: 10px;
-            color: $site-grey;
-        }
-        p {
-            font-size: 16px;
-        }
-        button {
-            outline: none;
-            border: none;
-            cursor: pointer;
-            font-size: 20px;
-            font-weight: 400;
-            color: #FFF;
-            background-color: $site-grey;
-            padding: 8px 14px;
-            margin: 15px 5px;
-            letter-spacing: 2px;
-            text-transform: capitalize;
-            box-shadow: 0 15px 10px rgba(0, 0, 0, 0.4);
+      width: 40%;
+      h2 {
+        font-size: 36px;
+        margin-bottom: 10px;
+        color: $site-grey;
+      }
+      p {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
 
-            a {
-                text-decoration: none;
-                color: #FFF;
-            }
+      ul {
+        width: 100%;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+
+        li {
+          font-size: 22px;
+          padding: 0 20px;
+          margin: 0 10px 10px 0;
+          text-align: center;
+          border: 1px solid $site-grey;
+          border-radius: 20px;
+          background-color: $site-green;
+          cursor: default;
         }
 
-        button:hover {
-            background-color: $site-green;
+        li:hover {
+          //   transform: scale(1.1);
+          transition: 0.5s;
+          background-color: $site-white;
         }
+      }
+
+      .noMargin {
+        margin: 0;
+      }
+
+      button {
+        outline: none;
+        border: none;
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: 400;
+        color: #fff;
+        background-color: $site-grey;
+        padding: 8px 14px;
+        margin: 15px 0;
+        letter-spacing: 2px;
+        text-transform: capitalize;
+        box-shadow: 0 15px 10px rgba(0, 0, 0, 0.4);
+
+        a {
+          text-decoration: none;
+          color: #fff;
+        }
+      }
+
+      button:hover {
+        background-color: $site-green;
+      }
     }
-
+  }
 }
 
 @media (max-width: 970px) {
-    .projectsPage {
-        flex-direction: column;
+  .projectsPage {
+    flex-direction: column;
 
-        .quickLook {
-            margin-bottom: 20px;
-        }
-
-        .textAndLink {
-            width: 70%;
-        }
+    .quickLook {
+      margin-bottom: 20px;
     }
+
+    .textAndLink {
+      width: 70%;
+    }
+  }
 }
 
 @media (max-width: 500px) {
-    .projectsPage {
-        width: 100%;
-        .quickLook {
-            width: 400px;
+  .projectsPage {
+    width: 100%;
+    .quickLook {
+      width: 400px;
 
-            img {
-                width: 400px;
-            }
-        }
+      img {
+        width: 400px;
+      }
     }
+  }
 }
