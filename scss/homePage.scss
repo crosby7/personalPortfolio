@@ -35,7 +35,7 @@
 
     h1 {
       display: block;
-      font-size: 6em;
+      font-size: 5em;
       font-weight: 900;
       color: $site-grey;
     }
@@ -50,7 +50,7 @@
       width: 90%;
       font-size: 1.5em;
       color: $site-grey;
-      margin-top: 20px;
+      margin-top: 30px;
     }
 
     .btns {
@@ -149,11 +149,12 @@
 @media (max-width: $site-tablet) {
   .container {
     .wrapper {
+      padding: 0 5%;
       .topline {
         font-size: 30px;
       }
       h1 {
-        font-size: 40px;
+        font-size: 36px;
         height: 120px;
       }
 
@@ -161,6 +162,10 @@
         font-size: 20px;
         margin-bottom: 20px;
       }
+    }
+
+    h1 {
+      font-size: 30px;
     }
   }
 }
