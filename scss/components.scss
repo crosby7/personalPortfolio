@@ -2,6 +2,7 @@ nav {
   width: 100%;
   display: flex;
   margin-top: 10px;
+  margin-bottom: 30px;
   justify-content: space-around;
   height: 80px;
   z-index: 11;
@@ -12,7 +13,7 @@ nav {
     font-weight: 800;
     color: $site-grey;
     letter-spacing: 3px;
-    cursor: pointer;
+    cursor: default;
     text-transform: uppercase;
   }
 
@@ -62,7 +63,7 @@ nav {
   }
 }
 
-@media (max-width: 1020px) {
+@media (max-width: $site-laptop) {
   nav {
     .logo {
       font-size: 26px;
@@ -78,7 +79,7 @@ nav {
   }
 }
 
-@media (max-width: 680px) {
+@media (max-width: $site-tablet) {
   nav {
     .logo {
       font-size: 24px;

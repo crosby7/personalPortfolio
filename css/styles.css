@@ -10,13 +10,14 @@ html {
 }
 
 body {
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 nav {
   width: 100%;
   display: flex;
   margin-top: 10px;
+  margin-bottom: 30px;
   justify-content: space-around;
   height: 80px;
   z-index: 11;
@@ -27,7 +28,7 @@ nav .logo {
   font-weight: 800;
   color: #3d535f;
   letter-spacing: 3px;
-  cursor: pointer;
+  cursor: default;
   text-transform: uppercase;
 }
 nav .navItems {
@@ -126,15 +127,15 @@ nav .mobileNav li:hover a {
 }
 .container {
   width: 100%;
-  min-height: 100vh;
-  background-color: #f3f5f8;
+  min-height: calc(100vh - 120px);
+  position: relative;
+  z-index: 5;
 }
 .container .wrapper {
   width: 100%;
   height: 100%;
   padding: 0 10%;
   overflow: hidden;
-  margin-top: 20px;
 }
 .container .wrapper .cols {
   width: 70%;
@@ -196,6 +197,30 @@ nav .mobileNav li:hover a {
   background-color: #0dff70;
 }
 
+.container::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 150px;
+  left: -400px;
+  background: linear-gradient(to left, white, #0dff70 90%);
+  border-radius: 50%;
+  width: 1000px;
+  height: 1000px;
+}
+
+.container::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  right: -300px;
+  background: linear-gradient(to right, white, #0dff70 90%);
+  width: 1000px;
+  height: 500px;
+  border-radius: 1000px 1000px 0 0;
+}
+
 @media (max-width: 1020px) {
   .container .wrapper h1 {
     font-size: 4em;
@@ -226,7 +251,8 @@ nav .mobileNav li:hover a {
 }
 .aboutPage {
   width: 90%;
-  margin: 40px auto;
+  height: 100%;
+  margin: 0 auto;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -244,23 +270,22 @@ nav .mobileNav li:hover a {
   font-weight: 400;
   padding-bottom: 10px;
   border-bottom: 2px solid #0dff70;
+  margin-bottom: 120px;
 }
 
-@media (max-width: 1150px) {
-  .aboutPage .myImage {
-    width: 60%;
-    height: 100%;
-  }
-  .aboutPage .myImage img {
-    width: 100%;
-  }
-}
 @media (max-width: 1020px) {
+  .aboutPage {
+    position: relative;
+    display: block;
+  }
   .aboutPage .aboutText {
-    font-size: 16px;
+    position: absolute;
+    font-size: 20px;
+    top: 100px;
+    right: 100px;
   }
 }
-@media (max-width: 750px) {
+@media (max-width: 680px) {
   .aboutPage {
     flex-direction: column;
   }
@@ -273,12 +298,12 @@ nav .mobileNav li:hover a {
 }
 .projectsPage {
   width: 90%;
-  min-height: 1vh;
-  margin: 40px auto;
+  margin: 0 auto;
 }
 .projectsPage .project {
-  width: 100%;
+  width: 80%;
   height: 400px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -286,7 +311,7 @@ nav .mobileNav li:hover a {
 .projectsPage .project .quickLook img {
   width: 500px;
   height: auto;
-  border: 2px solid #0dff70;
+  border: 2px solid #3d535f;
   border-radius: 20px;
 }
 .projectsPage .project .textAndLink {
@@ -299,7 +324,7 @@ nav .mobileNav li:hover a {
 }
 .projectsPage .project .textAndLink p {
   font-size: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .projectsPage .project .textAndLink ul {
   width: 100%;
@@ -317,12 +342,14 @@ nav .mobileNav li:hover a {
   text-align: center;
   border: 1px solid #3d535f;
   border-radius: 20px;
-  background-color: #0dff70;
+  background-color: #3d535f;
+  color: white;
   cursor: default;
 }
 .projectsPage .project .textAndLink ul li:hover {
   transition: 0.5s;
   background-color: #f3f5f8;
+  color: #3d535f;
 }
 .projectsPage .project .textAndLink .noMargin {
   margin: 0;
@@ -337,9 +364,10 @@ nav .mobileNav li:hover a {
   background-color: #3d535f;
   padding: 8px 14px;
   margin: 15px 0;
+  border-radius: 5px;
   letter-spacing: 2px;
   text-transform: capitalize;
-  box-shadow: 0 15px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
 }
 .projectsPage .project .textAndLink button a {
   text-decoration: none;
@@ -349,26 +377,66 @@ nav .mobileNav li:hover a {
   background-color: #0dff70;
 }
 
-@media (max-width: 970px) {
-  .projectsPage {
-    flex-direction: column;
+@media (max-width: 1550px) {
+  .projectsPage .project .quickLook {
+    width: 400px;
   }
-  .projectsPage .quickLook {
-    margin-bottom: 20px;
+  .projectsPage .project .quickLook img {
+    width: 400px;
   }
-  .projectsPage .textAndLink {
-    width: 70%;
+  .projectsPage .project .textAndLink {
+    width: 50%;
+  }
+  .projectsPage .project .textAndLink h2 {
+    font-size: 30px;
+  }
+  .projectsPage .project .textAndLink p {
+    font-size: 18px;
+  }
+  .projectsPage .project .textAndLink ul li {
+    font-size: 18px;
+    padding: 3px 10px;
   }
 }
-@media (max-width: 500px) {
-  .projectsPage {
+@media (max-width: 1350px) {
+  .projectsPage .project .quickLook {
+    width: 300px;
+  }
+  .projectsPage .project .quickLook img {
+    width: 300px;
+  }
+  .projectsPage .project .textAndLink {
+    width: 50%;
+  }
+  .projectsPage .project .textAndLink h2 {
+    font-size: 26px;
+  }
+  .projectsPage .project .textAndLink p {
+    font-size: 16px;
+  }
+  .projectsPage .project .textAndLink ul li {
+    font-size: 16px;
+    padding: 3px 10px;
+  }
+  .projectsPage .project .textAndLink button {
+    font-size: 18px;
+    padding: 6px 10px;
+  }
+}
+@media (max-width: 950px) {
+  .projectsPage .project {
+    flex-direction: column;
+    height: 700px;
+    margin-bottom: 0px;
+  }
+  .projectsPage .project .quickLook {
+    width: 70%;
+  }
+  .projectsPage .project .quickLook img {
     width: 100%;
   }
-  .projectsPage .quickLook {
-    width: 400px;
-  }
-  .projectsPage .quickLook img {
-    width: 400px;
+  .projectsPage .project .textAndLink button {
+    margin-bottom: 30px;
   }
 }
 
