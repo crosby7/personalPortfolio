@@ -10,6 +10,7 @@
     padding: 0 10%;
     overflow: hidden;
     //margin-top: 20px;
+    margin-bottom: 80px;
 
     .cols {
       width: 70%;
@@ -80,6 +81,14 @@
         background-color: $site-green;
       }
     }
+  }
+
+  h1 {
+    font-size: 36px;
+    padding: 0 10%;
+    margin-bottom: 20px;
+    font-family: "poppins", sans-serif;
+    color: $site-grey;
   }
 }
 

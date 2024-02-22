@@ -136,6 +136,7 @@ nav .mobileNav li:hover a {
   height: 100%;
   padding: 0 10%;
   overflow: hidden;
+  margin-bottom: 80px;
 }
 .container .wrapper .cols {
   width: 70%;
@@ -195,6 +196,13 @@ nav .mobileNav li:hover a {
 }
 .container .wrapper .btns button:hover {
   background-color: #0dff70;
+}
+.container h1 {
+  font-size: 36px;
+  padding: 0 10%;
+  margin-bottom: 20px;
+  font-family: "poppins", sans-serif;
+  color: #3d535f;
 }
 
 .container::before {
@@ -273,27 +281,27 @@ nav .mobileNav li:hover a {
   margin-bottom: 120px;
 }
 
-@media (max-width: 1020px) {
+@media (max-width: 1300px) {
   .aboutPage {
-    position: relative;
-    display: block;
+    flex-direction: column-reverse;
+  }
+  .aboutPage .myImage img {
+    width: 500px;
   }
   .aboutPage .aboutText {
-    position: absolute;
-    font-size: 20px;
-    top: 100px;
-    right: 100px;
+    margin-top: 40px;
+    width: 80%;
+    margin-bottom: 0;
   }
 }
-@media (max-width: 680px) {
-  .aboutPage {
-    flex-direction: column;
-  }
-  .aboutPage .myImage {
-    margin-bottom: 20px;
+@media (max-width: 800px) {
+  .aboutPage .myImage img {
+    width: 400px;
   }
   .aboutPage .aboutText {
-    width: 80%;
+    margin-top: 20px;
+    width: 90%;
+    font-size: 18px;
   }
 }
 .projectsPage {

@@ -1,55 +1,59 @@
 .aboutPage {
-    width: 90%;
-    height: 100%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  .myImage {
+    img {
+      width: 800px;
+      height: auto;
+      padding-bottom: 10px;
+      border-bottom: 2px solid $site-green;
+    }
+  }
+
+  .aboutText {
+    width: 30%;
+    font-size: 22px;
+    color: $site-grey;
+    font-weight: 400;
+    padding-bottom: 10px;
+    border-bottom: 2px solid $site-green;
+    margin-bottom: 120px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .aboutPage {
+    flex-direction: column-reverse;
 
     .myImage {
-        img {
-            width: 800px;
-            height: auto;
-            padding-bottom: 10px;
-            border-bottom: 2px solid $site-green;
-        }
+      img {
+        width: 500px;
+      }
     }
-
     .aboutText {
-        width: 30%;
-        font-size: 22px;
-        color: $site-grey;
-        font-weight: 400;
-        padding-bottom: 10px;
-        border-bottom: 2px solid $site-green;
-        margin-bottom: 120px;
+      margin-top: 40px;
+      width: 80%;
+      margin-bottom: 0;
     }
+  }
 }
 
-@media (max-width: $site-laptop) {
-    .aboutPage {
-        position: relative;
-        display: block;
-
-        .aboutText {
-            position: absolute;
-            font-size: 20px;
-            top: 100px;
-            right: 100px;
-        }
+@media (max-width: 800px) {
+  .aboutPage {
+    .myImage {
+      img {
+        width: 400px;
+      }
     }
-}
-
-@media (max-width: $site-tablet) {
-    .aboutPage {
-        flex-direction: column;
-
-        .myImage {
-            margin-bottom: 20px;
-        }
-
-        .aboutText {
-            width: 80%;
-        }
+    .aboutText {
+      margin-top: 20px;
+      width: 90%;
+      font-size: 18px;
     }
+  }
 }

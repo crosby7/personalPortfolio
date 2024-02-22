@@ -7,7 +7,17 @@ export function loadPage() {
     let pageToLoad = hashTag.replace("#", "");
 
 
-    if (pageToLoad != "")
+    if (pageToLoad == 'home')
+    {
+        $.get(`pages/home.html`, function (data) {
+            $("#container").html(data);
+            initializeTyped();
+        });
+        $.get(`pages/projects.html`, function (data) {
+            $("#container").append(data);
+        });
+    }
+    else if (pageToLoad != "")
     {
         $.get(`pages/${pageToLoad}.html`, function (data) {
             $("#container").html(data);
@@ -18,7 +28,10 @@ export function loadPage() {
         $.get(`pages/home.html`, function (data) {
             $("#container").html(data);
             initializeTyped();
-        })
+        });
+        $.get(`pages/projects.html`, function (data) {
+            $("#container").append(data);
+        });
     }
 
     if (pageToLoad == "home")
@@ -30,7 +43,7 @@ export function loadPage() {
 
 function initializeTyped() {
     typingEffect = new Typed(".multiText", {
-        strings : ["a coder", "a developer", "Cameron Crosby"],
+        strings : ["a programmer", "a developer", "Cameron Crosby"],
         loop : true,
         typeSpeed : 100,
         backSpeed : 80,
