@@ -33,15 +33,10 @@ export function loadPage() {
             $("#container").append(data);
         });
     }
-
-    if (pageToLoad == "home")
-    {
-        setTimeout(initializeTyped, 500);
-        initializeTyped();
-    }
 }
 
 function initializeTyped() {
+    console.log('init typed');
     typingEffect = new Typed(".multiText", {
         strings : ["a programmer", "a developer", "Cameron Crosby"],
         loop : true,
