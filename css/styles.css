@@ -47,6 +47,9 @@ nav .navItems li a {
   text-decoration: none;
   text-transform: capitalize;
 }
+nav .navItems li a i {
+  font-size: 30px;
+}
 nav .mobileNav {
   display: none;
   margin-top: 1px;
