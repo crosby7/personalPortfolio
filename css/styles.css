@@ -142,7 +142,7 @@ nav .mobileNav li:hover a {
   margin-bottom: 80px;
 }
 .container .wrapper .cols {
-  width: 70%;
+  width: 90%;
 }
 .container .wrapper .topline {
   display: block;
@@ -160,6 +160,7 @@ nav .mobileNav li:hover a {
   background-color: #0dff70;
 }
 .container .wrapper h1 {
+  width: 100%;
   display: block;
   font-size: 5em;
   font-weight: 900;
@@ -353,20 +354,16 @@ nav .mobileNav li:hover a {
   margin-bottom: 20px;
 }
 .projectsPage .project .textAndLink ul li {
-  font-size: 22px;
-  padding: 0 20px;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 5px 20px;
   margin: 0 10px 10px 0;
   text-align: center;
   border: 1px solid #3d535f;
-  border-radius: 20px;
-  background-color: #3d535f;
-  color: white;
-  cursor: default;
-}
-.projectsPage .project .textAndLink ul li:hover {
-  transition: 0.5s;
-  background-color: #f3f5f8;
+  border-radius: 30px;
+  background-color: #0dff70;
   color: #3d535f;
+  cursor: default;
 }
 .projectsPage .project .textAndLink .noMargin {
   margin: 0;

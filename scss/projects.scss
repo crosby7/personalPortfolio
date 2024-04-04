@@ -41,22 +41,16 @@
         margin-bottom: 20px;
 
         li {
-          font-size: 22px;
-          padding: 0 20px;
+          font-size: 20px;
+          font-weight: 500;
+          padding: 5px 20px;
           margin: 0 10px 10px 0;
           text-align: center;
           border: 1px solid $site-grey;
-          border-radius: 20px;
-          background-color: $site-grey;
-          color: white;
-          cursor: default;
-        }
-
-        li:hover {
-          //   transform: scale(1.1);
-          transition: 0.5s;
-          background-color: $site-white;
+          border-radius: 30px;
+          background-color: $site-green;
           color: $site-grey;
+          cursor: default;
         }
       }
 
@@ -95,7 +89,6 @@
 @media (max-width: 1550px) {
   .projectsPage {
     .project {
-
       .quickLook {
         width: 400px;
         img {
@@ -124,7 +117,6 @@
 @media (max-width: 1350px) {
   .projectsPage {
     .project {
-
       .quickLook {
         width: 300px;
         img {
@@ -164,21 +156,17 @@
 
       .quickLook {
         width: 70%;
-  
+
         img {
           width: 100%;
         }
       }
-  
+
       .textAndLink {
         button {
           margin-bottom: 30px;
         }
       }
     }
-
-
   }
 }
-
-
