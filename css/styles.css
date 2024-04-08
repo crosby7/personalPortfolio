@@ -147,7 +147,7 @@ nav .mobileNav li:hover a {
 .container .wrapper .topline {
   display: block;
   position: relative;
-  font-size: 35px;
+  font-size: 32px;
   letter-spacing: 5px;
   color: #3d535f;
 }
@@ -162,7 +162,7 @@ nav .mobileNav li:hover a {
 .container .wrapper h1 {
   width: 100%;
   display: block;
-  font-size: 5em;
+  font-size: 4.5em;
   font-weight: 900;
   color: #3d535f;
 }
@@ -172,7 +172,7 @@ nav .mobileNav li:hover a {
 .container .wrapper p {
   display: block;
   width: 90%;
-  font-size: 1.5em;
+  font-size: 1.4em;
   color: #3d535f;
   margin-top: 30px;
 }
@@ -201,7 +201,7 @@ nav .mobileNav li:hover a {
 .container .wrapper .btns button:hover {
   background-color: #0dff70;
 }
-.container h1 {
+.container h2 {
   font-size: 36px;
   padding: 0 10%;
   margin-bottom: 20px;
@@ -273,15 +273,19 @@ nav .mobileNav li:hover a {
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
-  align-items: center;
 }
 .aboutPage .myImage img {
   width: 800px;
   height: auto;
-  padding-bottom: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 200px;
   border-bottom: 2px solid #0dff70;
 }
 .aboutPage .aboutText {
+  position: absolute;
+  top: 20%;
+  right: 15%;
   width: 30%;
   font-size: 22px;
   color: #3d535f;
@@ -290,7 +294,30 @@ nav .mobileNav li:hover a {
   border-bottom: 2px solid #0dff70;
   margin-bottom: 120px;
 }
+.aboutPage .aboutText button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 25px;
+  font-weight: 400;
+  color: #fff;
+  background-color: #3d535f;
+  padding: 8px 14px;
+  margin: 15px 0;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  box-shadow: 0 15px 10px rgba(0, 0, 0, 0.4);
+}
+.aboutPage .aboutText button a {
+  text-decoration: none;
+  color: #fff;
+}
 
+@media (max-width: 1600px) {
+  .aboutPage .aboutText {
+    right: 10%;
+  }
+}
 @media (max-width: 1300px) {
   .aboutPage {
     flex-direction: column-reverse;
@@ -299,15 +326,13 @@ nav .mobileNav li:hover a {
     width: 500px;
   }
   .aboutPage .aboutText {
-    margin-top: 40px;
     width: 80%;
     margin-bottom: 0;
+    top: 10%;
+    left: 5%;
   }
 }
 @media (max-width: 800px) {
-  .aboutPage .myImage img {
-    width: 400px;
-  }
   .aboutPage .aboutText {
     margin-top: 20px;
     width: 90%;
@@ -321,7 +346,7 @@ nav .mobileNav li:hover a {
 .projectsPage .project {
   width: 80%;
   height: 400px;
-  margin: 0 auto;
+  margin: 0 auto 20px auto;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -335,7 +360,7 @@ nav .mobileNav li:hover a {
 .projectsPage .project .textAndLink {
   width: 40%;
 }
-.projectsPage .project .textAndLink h2 {
+.projectsPage .project .textAndLink h3 {
   font-size: 36px;
   margin-bottom: 10px;
   color: #3d535f;
@@ -361,8 +386,8 @@ nav .mobileNav li:hover a {
   text-align: center;
   border: 1px solid #3d535f;
   border-radius: 30px;
-  background-color: #0dff70;
-  color: #3d535f;
+  background-color: #11c95e;
+  color: white;
   cursor: default;
 }
 .projectsPage .project .textAndLink .noMargin {
@@ -401,7 +426,7 @@ nav .mobileNav li:hover a {
   .projectsPage .project .textAndLink {
     width: 50%;
   }
-  .projectsPage .project .textAndLink h2 {
+  .projectsPage .project .textAndLink h3 {
     font-size: 30px;
   }
   .projectsPage .project .textAndLink p {
@@ -422,7 +447,7 @@ nav .mobileNav li:hover a {
   .projectsPage .project .textAndLink {
     width: 50%;
   }
-  .projectsPage .project .textAndLink h2 {
+  .projectsPage .project .textAndLink h3 {
     font-size: 26px;
   }
   .projectsPage .project .textAndLink p {

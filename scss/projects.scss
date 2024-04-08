@@ -5,7 +5,7 @@
   .project {
     width: 80%;
     height: 400px;
-    margin: 0 auto;
+    margin: 0 auto 20px auto;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -21,7 +21,7 @@
 
     .textAndLink {
       width: 40%;
-      h2 {
+      h3 {
         font-size: 36px;
         margin-bottom: 10px;
         color: $site-grey;
@@ -48,8 +48,8 @@
           text-align: center;
           border: 1px solid $site-grey;
           border-radius: 30px;
-          background-color: $site-green;
-          color: $site-grey;
+          background-color: $site-green-dark;
+          color: white;
           cursor: default;
         }
       }
@@ -98,7 +98,7 @@
 
       .textAndLink {
         width: 50%;
-        h2 {
+        h3 {
           font-size: 30px;
         }
         p {
@@ -126,7 +126,7 @@
 
       .textAndLink {
         width: 50%;
-        h2 {
+        h3 {
           font-size: 26px;
         }
         p {

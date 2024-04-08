@@ -4,18 +4,23 @@
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
-  align-items: center;
 
   .myImage {
     img {
       width: 800px;
       height: auto;
-      padding-bottom: 10px;
+      // padding-bottom: 10px;
+      position: absolute;
+      bottom: 0;
+      left: 200px;
       border-bottom: 2px solid $site-green;
     }
   }
 
   .aboutText {
+    position: absolute;
+    top: 20%;
+    right: 15%;
     width: 30%;
     font-size: 22px;
     color: $site-grey;
@@ -23,6 +28,34 @@
     padding-bottom: 10px;
     border-bottom: 2px solid $site-green;
     margin-bottom: 120px;
+
+    button {
+      outline: none;
+      border: none;
+      cursor: pointer;
+      font-size: 25px;
+      font-weight: 400;
+      color: #fff;
+      background-color: $site-grey;
+      padding: 8px 14px;
+      margin: 15px 0;
+      letter-spacing: 2px;
+      text-transform: capitalize;
+      box-shadow: 0 15px 10px rgba(0, 0, 0, 0.4);
+
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
+    }
+  }
+}
+
+@media (max-width: 1600px) {
+  .aboutPage {
+    .aboutText {
+      right: 10%;
+    }
   }
 }
 
@@ -36,20 +69,16 @@
       }
     }
     .aboutText {
-      margin-top: 40px;
       width: 80%;
       margin-bottom: 0;
+      top: 10%;
+      left: 5%;
     }
   }
 }
 
 @media (max-width: 800px) {
   .aboutPage {
-    .myImage {
-      img {
-        width: 400px;
-      }
-    }
     .aboutText {
       margin-top: 20px;
       width: 90%;
