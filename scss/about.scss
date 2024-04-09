@@ -6,14 +6,16 @@
   justify-content: space-around;
 
   .myImage {
+    position: absolute;
+    bottom: 0;
+    left: 100px;
+
     img {
       width: 800px;
       height: auto;
       // padding-bottom: 10px;
-      position: absolute;
-      bottom: 0;
-      left: 200px;
       border-bottom: 2px solid $site-green;
+      text-align: center;
     }
   }
 
@@ -22,12 +24,32 @@
     top: 20%;
     right: 15%;
     width: 30%;
-    font-size: 22px;
-    color: $site-grey;
-    font-weight: 400;
     padding-bottom: 10px;
     border-bottom: 2px solid $site-green;
     margin-bottom: 120px;
+
+    h1 {
+      font-size: 38px;
+      color: $site-grey;
+      margin-bottom: 30px;
+    }
+
+    p {
+      font-size: 22px;
+      color: $site-grey;
+      font-weight: 400;
+    }
+
+    h2 {
+      font-size: 32px;
+      margin: 20px 0 0 0;
+      padding: 0;
+    }
+
+    .contact {
+      font-size: 20px;
+      margin-top: 20px;
+    }
 
     button {
       outline: none;
@@ -59,7 +81,7 @@
   }
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1350px) {
   .aboutPage {
     flex-direction: column-reverse;
 
@@ -73,16 +95,62 @@
       margin-bottom: 0;
       top: 10%;
       left: 5%;
+
+      h1 {
+        font-size: 32px;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 20px;
+      }
+
+      h2 {
+        font-size: 28px;
+      }
+
+      .contact {
+        font-size: 18px;
+      }
+
+      button {
+        font-size: 22px;
+        padding: 6px 10px;
+      }
     }
   }
 }
 
 @media (max-width: 800px) {
   .aboutPage {
+
+    .myImage {
+      left: 10%;
+    }
+
     .aboutText {
-      margin-top: 20px;
       width: 90%;
-      font-size: 18px;
+      
+      h1 {
+        font-size: 26px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+
+      h2 {
+        font-size: 22px;
+      }
+
+      .contact {
+        font-size: 16px;
+        margin-top: 10px;
+      }
+
+      button {
+        font-size: 20px;
+      }
     }
   }
 }

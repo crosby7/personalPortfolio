@@ -274,25 +274,44 @@ nav .mobileNav li:hover a {
   display: flex;
   justify-content: space-around;
 }
+.aboutPage .myImage {
+  position: absolute;
+  bottom: 0;
+  left: 100px;
+}
 .aboutPage .myImage img {
   width: 800px;
   height: auto;
-  position: absolute;
-  bottom: 0;
-  left: 200px;
   border-bottom: 2px solid #0dff70;
+  text-align: center;
 }
 .aboutPage .aboutText {
   position: absolute;
   top: 20%;
   right: 15%;
   width: 30%;
-  font-size: 22px;
-  color: #3d535f;
-  font-weight: 400;
   padding-bottom: 10px;
   border-bottom: 2px solid #0dff70;
   margin-bottom: 120px;
+}
+.aboutPage .aboutText h1 {
+  font-size: 38px;
+  color: #3d535f;
+  margin-bottom: 30px;
+}
+.aboutPage .aboutText p {
+  font-size: 22px;
+  color: #3d535f;
+  font-weight: 400;
+}
+.aboutPage .aboutText h2 {
+  font-size: 32px;
+  margin: 20px 0 0 0;
+  padding: 0;
+}
+.aboutPage .aboutText .contact {
+  font-size: 20px;
+  margin-top: 20px;
 }
 .aboutPage .aboutText button {
   outline: none;
@@ -318,7 +337,7 @@ nav .mobileNav li:hover a {
     right: 10%;
   }
 }
-@media (max-width: 1300px) {
+@media (max-width: 1350px) {
   .aboutPage {
     flex-direction: column-reverse;
   }
@@ -331,12 +350,46 @@ nav .mobileNav li:hover a {
     top: 10%;
     left: 5%;
   }
+  .aboutPage .aboutText h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  .aboutPage .aboutText p {
+    font-size: 20px;
+  }
+  .aboutPage .aboutText h2 {
+    font-size: 28px;
+  }
+  .aboutPage .aboutText .contact {
+    font-size: 18px;
+  }
+  .aboutPage .aboutText button {
+    font-size: 22px;
+    padding: 6px 10px;
+  }
 }
 @media (max-width: 800px) {
+  .aboutPage .myImage {
+    left: 10%;
+  }
   .aboutPage .aboutText {
-    margin-top: 20px;
     width: 90%;
-    font-size: 18px;
+  }
+  .aboutPage .aboutText h1 {
+    font-size: 26px;
+  }
+  .aboutPage .aboutText p {
+    font-size: 16px;
+  }
+  .aboutPage .aboutText h2 {
+    font-size: 22px;
+  }
+  .aboutPage .aboutText .contact {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  .aboutPage .aboutText button {
+    font-size: 20px;
   }
 }
 .projectsPage {
