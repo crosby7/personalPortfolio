@@ -13,9 +13,6 @@ export function loadPage() {
             $("#container").html(data);
             initializeTyped();
         });
-        $.get(`pages/projects.html`, function (data) {
-            $("#container").append(data);
-        });
     }
     else if (pageToLoad != "")
     {
@@ -28,9 +25,6 @@ export function loadPage() {
         $.get(`pages/home.html`, function (data) {
             $("#container").html(data);
             initializeTyped();
-        });
-        $.get(`pages/projects.html`, function (data) {
-            $("#container").append(data);
         });
     }
 }
