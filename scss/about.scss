@@ -1,17 +1,17 @@
 .aboutPage {
   width: 90%;
-  height: 100%;
+  height: calc(100vh - 120px);
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
+  align-items: end;
 
   .myImage {
-    position: absolute;
-    bottom: 0;
-    left: 100px;
+    width: 50%;
+    height: auto;
 
     img {
-      width: 800px;
+      width: 100%;
       height: auto;
       // padding-bottom: 10px;
       border-bottom: 2px solid $site-green;
@@ -20,13 +20,11 @@
   }
 
   .aboutText {
-    position: absolute;
-    top: 20%;
-    right: 15%;
-    width: 30%;
+    width: 450px;
+    height: 800px;
     padding-bottom: 10px;
     border-bottom: 2px solid $site-green;
-    margin-bottom: 120px;
+    margin-bottom: 10%;
 
     h1 {
       font-size: 38px;
@@ -73,84 +71,121 @@
   }
 }
 
-@media (max-width: 1600px) {
-  .aboutPage {
-    .aboutText {
-      right: 10%;
-    }
-  }
-}
+// @media (max-width: 1600px) {
+//   .aboutPage {
+//     .aboutText {
+//       right: 10%;
+//     }
+//   }
+// }
 
-@media (max-width: 1350px) {
+@media (max-width: 1500px) {
   .aboutPage {
-    flex-direction: column-reverse;
-
     .myImage {
-      img {
-        width: 500px;
-      }
+      width: 40%;
     }
+
     .aboutText {
-      width: 80%;
+      height: 550px;
       margin-bottom: 0;
-      top: 10%;
-      left: 5%;
 
       h1 {
-        font-size: 32px;
-        margin-bottom: 10px;
+        font-size: 30px;
+        margin-bottom: 5px;
       }
 
       p {
-        font-size: 20px;
+        font-size: 16px;
       }
 
       h2 {
-        font-size: 28px;
+        font-size: 24px;
+        margin-top: 10px;
       }
 
       .contact {
-        font-size: 18px;
+        font-size: 16px;
+        margin-top: 8px;
       }
 
       button {
-        font-size: 22px;
+        font-size: 20px;
         padding: 6px 10px;
       }
     }
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1100px) {
   .aboutPage {
+    height: 100%;
+    flex-direction: column-reverse;
+    align-items: center;
 
     .myImage {
-      left: 10%;
+      img {
+        width: 500px;
+      }
     }
 
     .aboutText {
-      width: 90%;
-      
-      h1 {
-        font-size: 26px;
-      }
-
-      p {
-        font-size: 16px;
-      }
+      width: 95%;
+      height: 350px;
 
       h2 {
-        font-size: 22px;
+        text-align: center;
+        margin-top: 20px;
       }
 
-      .contact {
-        font-size: 16px;
-        margin-top: 10px;
-      }
+      .contactSection {
+        width: 50%;
+        margin: 20px auto 0 auto;
+        display: flex;
+        justify-content: space-around;
 
-      button {
-        font-size: 20px;
+        .contactGroup {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
       }
     }
   }
 }
+
+
+@media (max-width: 975px) {
+  .aboutPage {
+    .myImage {
+      width: 400px;
+
+      img {
+        width: 400px;
+      }
+    }
+
+    .aboutText {
+      height: auto;
+      h1 {
+        font-size: 26px;
+      }
+      p {
+        font-size: 14px;
+      }
+      h2 {
+        font-size: 20px;
+      }
+      .contactSection {
+        width: 100%;
+        margin-top: 10px;
+        .contact {
+          font-size: 14px;
+        }
+        button {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+

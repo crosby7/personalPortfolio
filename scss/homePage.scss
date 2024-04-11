@@ -145,10 +145,18 @@
       }
     }
   }
+
+  .container:before {
+    width: 750px;
+    height: 750px;
+    bottom: 100px;
+    left: -300px;
+  }
 }
 
 @media (max-width: $site-tablet) {
   .container {
+
     .wrapper {
       padding: 0 5%;
       .topline {
