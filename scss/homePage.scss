@@ -97,13 +97,13 @@
   content: "";
   position: absolute;
   z-index: -1;
-  top: 150px;
+  top: 40px;
   left: -400px;
   background: linear-gradient(to left, white, $site-green 90%);
   //background-color: $site-green;
   border-radius: 50%;
-  width: 1000px;
-  height: 1000px;
+  width: 800px;
+  height: 800px;
 }
 
 .container::after {
@@ -156,7 +156,6 @@
 
 @media (max-width: $site-tablet) {
   .container {
-
     .wrapper {
       padding: 0 5%;
       .topline {

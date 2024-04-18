@@ -213,12 +213,12 @@ nav .mobileNav li:hover a {
   content: "";
   position: absolute;
   z-index: -1;
-  top: 150px;
+  top: 40px;
   left: -400px;
   background: linear-gradient(to left, white, #0dff70 90%);
   border-radius: 50%;
-  width: 1000px;
-  height: 1000px;
+  width: 800px;
+  height: 800px;
 }
 
 .container::after {
@@ -293,7 +293,7 @@ nav .mobileNav li:hover a {
 }
 .aboutPage .aboutText {
   width: 450px;
-  height: 800px;
+  height: 80%;
   padding-bottom: 10px;
   border-bottom: 2px solid #0dff70;
   margin-bottom: 10%;
