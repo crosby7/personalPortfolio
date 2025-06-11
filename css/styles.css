@@ -28,7 +28,7 @@ body {
   overflow: hidden;
   object-fit: cover;
   height: 100vh;
-  animation: lavaLamp 12s infinite alternate;
+  animation: lavaLamp 12s infinite;
 }
 
 .portBg1 {
