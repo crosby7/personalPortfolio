@@ -1,26 +1,61 @@
 .projectsPage {
   width: 90%;
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-auto-rows: 400px;
+  gap: 20px;
 
   .project {
-    width: 80%;
-    height: 400px;
-    gap: 20px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    height: 100%;
+    cursor: ns-resize;
 
     .quickLook {
+      width: 100%;
+      height: 100%;
+      position: relative;
+
+      &:hover::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+        border-radius: 20px;
+        pointer-events: none;
+        opacity: 1;
+        transition: opacity 0.7s ease;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+        border-radius: 20px;
+        pointer-events: none;
+        opacity: 0; // Initially hidden
+        transition: opacity 0.7s ease;
+      }
+
       img {
-        width: 500px;
-        height: auto;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
         border: 2px solid $site-green-dark;
         border-radius: 20px;
       }
     }
 
     .textAndLink {
-      width: 40%;
+      width: 100%;
+      display: none;
+
       h3 {
         font-size: 36px;
         margin-bottom: 10px;
@@ -70,8 +105,8 @@
         border-radius: 5px;
         letter-spacing: 2px;
         text-transform: capitalize;
-        box-shadow: 0 6px 20px rgba(0,0,0,0.18), 0 1.5px 4px rgba(0,0,0,0.15);
-
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18),
+          0 1.5px 4px rgba(0, 0, 0, 0.15);
 
         a {
           text-decoration: none;
@@ -89,15 +124,7 @@
 @media (max-width: 1550px) {
   .projectsPage {
     .project {
-      .quickLook {
-        width: 400px;
-        img {
-          width: 400px;
-        }
-      }
-
       .textAndLink {
-        width: 50%;
         h3 {
           font-size: 30px;
         }
@@ -117,15 +144,7 @@
 @media (max-width: 1350px) {
   .projectsPage {
     .project {
-      .quickLook {
-        width: 300px;
-        img {
-          width: 300px;
-        }
-      }
-
       .textAndLink {
-        width: 50%;
         h3 {
           font-size: 26px;
         }
@@ -150,17 +169,7 @@
 @media (max-width: 950px) {
   .projectsPage {
     .project {
-      flex-direction: column;
-      height: 700px;
       margin-bottom: 0px;
-
-      .quickLook {
-        width: 70%;
-
-        img {
-          width: 100%;
-        }
-      }
 
       .textAndLink {
         button {
