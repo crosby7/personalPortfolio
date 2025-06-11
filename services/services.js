@@ -1,41 +1,38 @@
+let siteTitle = document.getElementById("siteTitle");
 let globalNav = document.getElementById("navLinks");
+let pageContainer = document.getElementById("container");
 export var hamburgerMenu = document.getElementById("hamburgerMenu");
-var typingEffect;
 
 export function loadPage() {
     let hashTag = window.location.hash;
     let pageToLoad = hashTag.replace("#", "");
 
-
-    if (pageToLoad == 'home')
-    {
-        $.get(`pages/home.html`, function (data) {
-            $("#container").html(data);
-            initializeTyped();
-        });
+    function fetchContent(url) {
+        fetch(url)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                pageContainer.innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error fetching page:', error);
+                pageContainer.innerHTML = `<p>Error loading page: ${error.message}</p>`;
+            });
     }
-    else if (pageToLoad != "")
+
+
+    if (pageToLoad == 'home' || pageToLoad == "")
     {
-        $.get(`pages/${pageToLoad}.html`, function (data) {
-            $("#container").html(data);
-        })
+        fetchContent('pages/home.html');
+        siteTitle.innerHTML = "Cameron Crosby - Home";
     }
     else
     {
-        $.get(`pages/home.html`, function (data) {
-            $("#container").html(data);
-            initializeTyped();
-        });
+        fetchContent(`pages/${pageToLoad}.html`);
+        siteTitle.innerHTML = `Cameron Crosby - ${pageToLoad.charAt(0).toUpperCase() + pageToLoad.slice(1)}`;
     }
-}
-
-function initializeTyped() {
-    console.log('init typed');
-    typingEffect = new Typed(".multiText", {
-        strings : ["a programmer", "a developer", "Cameron Crosby"],
-        loop : true,
-        typeSpeed : 100,
-        backSpeed : 80,
-        backDelay : 2000
-    });
 }

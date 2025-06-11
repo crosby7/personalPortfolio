@@ -11,5 +11,53 @@ html {
 
 body {
   overflow-x: hidden;
+  position: relative;
+  background-color: $site-grey;
+  z-index: -29;
+  margin: 0;
+  color: white;
 }
 
+// Background Style
+.backgroundSvg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  z-index: -9;
+  overflow: hidden;
+  object-fit: cover;
+  height: 100vh;
+
+  animation: lavaLamp 12s infinite alternate;
+}
+
+// svg animation
+.portBg1 {
+  animation-duration: 14s;
+  animation-delay: 0s;
+}
+
+.portBg2 {
+  animation-duration: 16s;
+  animation-delay: 2s;
+}
+
+@keyframes lavaLamp {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  75% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

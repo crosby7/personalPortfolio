@@ -11,22 +11,67 @@ html {
 
 body {
   overflow-x: hidden;
+  position: relative;
+  background-color: #3d535f;
+  z-index: -29;
+  margin: 0;
+  color: white;
 }
 
+.backgroundSvg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  z-index: -9;
+  overflow: hidden;
+  object-fit: cover;
+  height: 100vh;
+  animation: lavaLamp 12s infinite alternate;
+}
+
+.portBg1 {
+  animation-duration: 14s;
+  animation-delay: 0s;
+}
+
+.portBg2 {
+  animation-duration: 16s;
+  animation-delay: 2s;
+}
+
+@keyframes lavaLamp {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  75% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 nav {
   width: 100%;
   display: flex;
-  margin-top: 10px;
   margin-bottom: 30px;
+  padding-top: 10px;
   justify-content: space-around;
   height: 80px;
   z-index: 11;
+  color: white;
 }
 nav .logo {
   display: flex;
   font-size: 32px;
   font-weight: 800;
-  color: #3d535f;
   letter-spacing: 3px;
   cursor: default;
   text-transform: uppercase;
@@ -42,8 +87,8 @@ nav .navItems li {
 nav .navItems li a {
   font-size: 25px;
   font-weight: 500;
-  color: #3d535f;
   letter-spacing: 3px;
+  color: white;
   text-decoration: none;
   text-transform: capitalize;
 }
@@ -61,7 +106,6 @@ nav .mobileNav li {
 nav .mobileNav li a {
   font-size: 25px;
   font-weight: 400;
-  color: #3d535f;
   letter-spacing: 3px;
   text-decoration: none;
   text-transform: capitalize;
@@ -130,7 +174,7 @@ nav .mobileNav li:hover a {
 }
 .container {
   width: 100%;
-  min-height: calc(100vh - 120px);
+  min-height: calc(100vh - 110px);
   position: relative;
   z-index: 5;
 }
@@ -141,39 +185,16 @@ nav .mobileNav li:hover a {
   overflow: hidden;
   margin-bottom: 80px;
 }
-.container .wrapper .cols {
-  width: 90%;
-}
-.container .wrapper .topline {
-  display: block;
-  position: relative;
-  font-size: 32px;
-  letter-spacing: 5px;
-  color: #3d535f;
-}
-.container .wrapper .topline::after {
-  position: absolute;
-  content: "";
-  height: 4px;
-  width: 45px;
-  bottom: 10px;
-  background-color: #0dff70;
-}
 .container .wrapper h1 {
-  width: 100%;
-  display: block;
-  font-size: 4.5em;
-  font-weight: 900;
-  color: #3d535f;
-}
-.container .wrapper .multiText {
-  color: #0dff70;
+  letter-spacing: 3px;
+  font-size: 50px;
+  color: #11c95e;
+  font-weight: 800;
 }
 .container .wrapper p {
   display: block;
   width: 90%;
   font-size: 1.4em;
-  color: #3d535f;
   margin-top: 30px;
 }
 .container .wrapper .btns {
@@ -187,12 +208,12 @@ nav .mobileNav li:hover a {
   font-size: 25px;
   font-weight: 400;
   color: #fff;
-  background-color: #3d535f;
+  background-color: #11c95e;
   padding: 8px 14px;
   margin: 15px 5px;
   letter-spacing: 2px;
   text-transform: capitalize;
-  box-shadow: 0 15px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18), 0 1.5px 4px rgba(0, 0, 0, 0.15);
 }
 .container .wrapper .btns button a {
   text-decoration: none;
@@ -209,36 +230,9 @@ nav .mobileNav li:hover a {
   color: #3d535f;
 }
 
-.container::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 40px;
-  left: -400px;
-  background: linear-gradient(to left, white, #0dff70 90%);
-  border-radius: 50%;
-  width: 800px;
-  height: 800px;
-}
-
-.container::after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  bottom: 0;
-  right: -300px;
-  background: linear-gradient(to right, white, #0dff70 90%);
-  width: 1000px;
-  height: 500px;
-  border-radius: 1000px 1000px 0 0;
-}
-
 @media (max-width: 1100px) {
   .container .wrapper h1 {
     font-size: 4em;
-  }
-  .container .wrapper .topline {
-    font-size: 28px;
   }
   .container .wrapper p {
     font-size: 24px;
@@ -247,19 +241,10 @@ nav .mobileNav li:hover a {
   .container .wrapper .btns button {
     font-size: 20px;
   }
-  .container:before {
-    width: 750px;
-    height: 750px;
-    bottom: 100px;
-    left: -300px;
-  }
 }
 @media (max-width: 680px) {
   .container .wrapper {
     padding: 0 5%;
-  }
-  .container .wrapper .topline {
-    font-size: 30px;
   }
   .container .wrapper h1 {
     font-size: 36px;
@@ -275,15 +260,16 @@ nav .mobileNav li:hover a {
 }
 .aboutPage {
   width: 90%;
-  height: calc(100vh - 120px);
+  height: calc(100vh - 110px);
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
   align-items: end;
 }
 .aboutPage .myImage {
-  width: 50%;
+  width: 34%;
   height: auto;
+  align-self: center;
 }
 .aboutPage .myImage img {
   width: 100%;
@@ -297,21 +283,23 @@ nav .mobileNav li:hover a {
   padding-bottom: 10px;
   border-bottom: 2px solid #0dff70;
   margin-bottom: 10%;
+  align-self: center;
 }
 .aboutPage .aboutText h1 {
   font-size: 38px;
-  color: #3d535f;
+  color: white;
   margin-bottom: 30px;
 }
 .aboutPage .aboutText p {
   font-size: 22px;
-  color: #3d535f;
+  color: white;
   font-weight: 400;
 }
 .aboutPage .aboutText h2 {
   font-size: 32px;
   margin: 20px 0 0 0;
   padding: 0;
+  color: white;
 }
 .aboutPage .aboutText .contact {
   font-size: 20px;
@@ -341,7 +329,7 @@ nav .mobileNav li:hover a {
     width: 40%;
   }
   .aboutPage .aboutText {
-    height: 550px;
+    height: 580px;
     margin-bottom: 0;
   }
   .aboutPage .aboutText h1 {
@@ -370,12 +358,15 @@ nav .mobileNav li:hover a {
     flex-direction: column-reverse;
     align-items: center;
   }
+  .aboutPage .myImage {
+    margin-top: 20px;
+  }
   .aboutPage .myImage img {
     width: 500px;
   }
   .aboutPage .aboutText {
     width: 95%;
-    height: 350px;
+    height: 370px;
   }
   .aboutPage .aboutText h2 {
     text-align: center;
@@ -391,6 +382,11 @@ nav .mobileNav li:hover a {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
+  }
+  .aboutPage .aboutText .contactSection .contactGroup .contact {
+    width: 200px;
+    height: 40px;
   }
 }
 @media (max-width: 975px) {
@@ -430,7 +426,7 @@ nav .mobileNav li:hover a {
 .projectsPage .project {
   width: 80%;
   height: 400px;
-  margin: 0 auto 20px auto;
+  gap: 20px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -438,7 +434,7 @@ nav .mobileNav li:hover a {
 .projectsPage .project .quickLook img {
   width: 500px;
   height: auto;
-  border: 2px solid #3d535f;
+  border: 2px solid #11c95e;
   border-radius: 20px;
 }
 .projectsPage .project .textAndLink {
@@ -447,7 +443,6 @@ nav .mobileNav li:hover a {
 .projectsPage .project .textAndLink h3 {
   font-size: 36px;
   margin-bottom: 10px;
-  color: #3d535f;
 }
 .projectsPage .project .textAndLink p {
   font-size: 20px;
@@ -468,10 +463,10 @@ nav .mobileNav li:hover a {
   padding: 5px 20px;
   margin: 0 10px 10px 0;
   text-align: center;
-  border: 1px solid #3d535f;
+  border: 1px solid #11c95e;
   border-radius: 30px;
-  background-color: #11c95e;
-  color: white;
+  background-color: #f3f5f8;
+  color: #11c95e;
   cursor: default;
 }
 .projectsPage .project .textAndLink .noMargin {
@@ -484,13 +479,13 @@ nav .mobileNav li:hover a {
   font-size: 20px;
   font-weight: 400;
   color: #fff;
-  background-color: #3d535f;
+  background-color: #11c95e;
   padding: 8px 14px;
   margin: 15px 0;
   border-radius: 5px;
   letter-spacing: 2px;
   text-transform: capitalize;
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18), 0 1.5px 4px rgba(0, 0, 0, 0.15);
 }
 .projectsPage .project .textAndLink button a {
   text-decoration: none;

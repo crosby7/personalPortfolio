@@ -5,7 +5,7 @@
   .project {
     width: 80%;
     height: 400px;
-    margin: 0 auto 20px auto;
+    gap: 20px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -14,7 +14,7 @@
       img {
         width: 500px;
         height: auto;
-        border: 2px solid $site-grey;
+        border: 2px solid $site-green-dark;
         border-radius: 20px;
       }
     }
@@ -24,7 +24,6 @@
       h3 {
         font-size: 36px;
         margin-bottom: 10px;
-        color: $site-grey;
       }
       p {
         font-size: 20px;
@@ -46,10 +45,10 @@
           padding: 5px 20px;
           margin: 0 10px 10px 0;
           text-align: center;
-          border: 1px solid $site-grey;
+          border: 1px solid $site-green-dark;
           border-radius: 30px;
-          background-color: $site-green-dark;
-          color: white;
+          background-color: $site-white;
+          color: $site-green-dark;
           cursor: default;
         }
       }
@@ -65,13 +64,14 @@
         font-size: 20px;
         font-weight: 400;
         color: #fff;
-        background-color: $site-grey;
+        background-color: $site-green-dark;
         padding: 8px 14px;
         margin: 15px 0;
         border-radius: 5px;
         letter-spacing: 2px;
         text-transform: capitalize;
-        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
+        box-shadow: 0 6px 20px rgba(0,0,0,0.18), 0 1.5px 4px rgba(0,0,0,0.15);
+
 
         a {
           text-decoration: none;

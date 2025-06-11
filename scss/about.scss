@@ -1,14 +1,15 @@
 .aboutPage {
   width: 90%;
-  height: calc(100vh - 120px);
+  height: calc(100vh - 110px);
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
   align-items: end;
 
   .myImage {
-    width: 50%;
+    width: 34%;
     height: auto;
+    align-self: center;
 
     img {
       width: 100%;
@@ -25,16 +26,17 @@
     padding-bottom: 10px;
     border-bottom: 2px solid $site-green;
     margin-bottom: 10%;
+    align-self: center;
 
     h1 {
       font-size: 38px;
-      color: $site-grey;
+      color: white;
       margin-bottom: 30px;
     }
 
     p {
       font-size: 22px;
-      color: $site-grey;
+      color: white;
       font-weight: 400;
     }
 
@@ -42,6 +44,7 @@
       font-size: 32px;
       margin: 20px 0 0 0;
       padding: 0;
+      color: white;
     }
 
     .contact {
@@ -86,7 +89,7 @@
     }
 
     .aboutText {
-      height: 550px;
+      height: 580px;
       margin-bottom: 0;
 
       h1 {
@@ -123,6 +126,8 @@
     align-items: center;
 
     .myImage {
+      margin-top: 20px;
+
       img {
         width: 500px;
       }
@@ -130,7 +135,7 @@
 
     .aboutText {
       width: 95%;
-      height: 350px;
+      height: 370px;
 
       h2 {
         text-align: center;
@@ -147,6 +152,13 @@
           display: flex;
           flex-direction: column;
           align-items: center;
+          text-align: center;
+
+          .contact {
+            width: 200px;
+            height: 40px;
+          }
+
         }
       }
     }

@@ -1,6 +1,6 @@
 .container {
   width: 100%;
-  min-height: calc(100vh - 120px);
+  min-height: calc(100vh - 110px);
   position: relative;
   z-index: 5;
 
@@ -11,46 +11,18 @@
     overflow: hidden;
     //margin-top: 20px;
     margin-bottom: 80px;
-
-    .cols {
-      width: 90%;
-    }
-
-    .topline {
-      display: block;
-      position: relative;
-      font-size: 32px;
-      letter-spacing: 5px;
-      color: $site-grey;
-    }
-
-    .topline::after {
-      position: absolute;
-      content: "";
-      height: 4px;
-      width: 45px;
-      bottom: 10px;
-      background-color: $site-green;
-    }
-
+    
     h1 {
-      width: 100%;
-      display: block;
-      font-size: 4.5em;
-      font-weight: 900;
-      color: $site-grey;
-    }
-
-    .multiText {
-      color: $site-green;
-      //text-transform: capitalize;
+      letter-spacing: 3px;
+      font-size: 50px;
+      color: $site-green-dark;
+      font-weight: 800;
     }
 
     p {
       display: block;
       width: 90%;
       font-size: 1.4em;
-      color: $site-grey;
       margin-top: 30px;
     }
 
@@ -65,12 +37,12 @@
         font-size: 25px;
         font-weight: 400;
         color: #fff;
-        background-color: $site-grey;
+        background-color: $site-green-dark;
         padding: 8px 14px;
         margin: 15px 5px;
         letter-spacing: 2px;
         text-transform: capitalize;
-        box-shadow: 0 15px 10px rgba(0, 0, 0, 0.4);
+        box-shadow: 0 6px 20px rgba(0,0,0,0.18), 0 1.5px 4px rgba(0,0,0,0.15);
 
         a {
           text-decoration: none;
@@ -93,44 +65,11 @@
   }
 }
 
-.container::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 40px;
-  left: -400px;
-  background: linear-gradient(to left, white, $site-green 90%);
-  //background-color: $site-green;
-  border-radius: 50%;
-  width: 800px;
-  height: 800px;
-}
-
-.container::after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  bottom: 0;
-  right: -300px;
-  background: linear-gradient(to right, white, $site-green 90%);
-  //background-color: $site-green;
-  // border-radius: 50%;
-  // width: 1000px;
-  // height: 1000px;
-  width: 1000px;
-  height: 500px;
-  border-radius: 1000px 1000px 0 0;
-}
-
 @media (max-width: $site-laptop) {
   .container {
     .wrapper {
       h1 {
         font-size: 4em;
-      }
-
-      .topline {
-        font-size: 28px;
       }
 
       p {
@@ -145,22 +84,13 @@
       }
     }
   }
-
-  .container:before {
-    width: 750px;
-    height: 750px;
-    bottom: 100px;
-    left: -300px;
-  }
 }
 
 @media (max-width: $site-tablet) {
   .container {
     .wrapper {
       padding: 0 5%;
-      .topline {
-        font-size: 30px;
-      }
+
       h1 {
         font-size: 36px;
         height: 120px;
