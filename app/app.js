@@ -21,11 +21,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const bg = document.querySelector(".backgroundSvg");
 
   window.addEventListener("mousemove", function (e) {
-    const percent = e.clientX / window.innerWidth;
+    const percentX = e.clientX / window.innerWidth;
     const percentY = e.clientY / window.innerHeight;
 
-    const translateX = (1 - percentX) * 50;
-    const translateY = (1 - percentY) * 50;
+    const translateX = (1 - percentX) * 10;
+    const translateY = (1 - percentY) * 10;
 
     bg.style.transform = `translate(${translateX}px, ${translateY}px)`;
   });
